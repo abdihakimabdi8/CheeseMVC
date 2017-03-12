@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloMVC", "HelloMVC\HelloMVC.csproj", "{393F3FDA-A23F-4C5B-B815-3B4322FF809D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheeseMVC", "HelloMVC\CheeseMVC.csproj", "{393F3FDA-A23F-4C5B-B815-3B4322FF809D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
