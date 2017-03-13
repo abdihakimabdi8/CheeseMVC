@@ -11,9 +11,9 @@ namespace CheeseMVC.Controllers
     public class CheeseController : Controller
     {
         // GET: /<controller>/
-        static private List<string> Cheeses = new List<string>();
-       
-                 
+        static private Dictionary<string, string> Cheeses = new Dictionary<string, string>();
+
+            
         public IActionResult Index()
 
         {
@@ -28,9 +28,24 @@ namespace CheeseMVC.Controllers
         [HttpPost]
             
         [Route("/Cheese/Add")]
-        public IActionResult NewCheeses(string name)
+        public IActionResult NewCheeses(string name, string description)
         {
-            Cheeses.Add(name);
+            Cheeses.Add(name, description);
+            return Redirect("/Cheese");
+        }
+        public IActionResult Remove()
+        {
+            ViewBag.cheeses = Cheeses;
+            return View();
+
+        }
+        [HttpPost]
+
+        [Route("/Cheese/Remove")]
+        public IActionResult RemoveCheese(string name, string description)
+
+        {
+            Cheeses.Remove(name);
             return Redirect("/Cheese");
         }
     }
